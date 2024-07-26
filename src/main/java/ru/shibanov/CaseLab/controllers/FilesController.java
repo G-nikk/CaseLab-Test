@@ -18,11 +18,16 @@ public class FilesController {
         this.filesService = filesService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public List<File> getFiles() {
         return filesService.findAll();
     }
-    @GetMapping("/{id}")
+
+    @GetMapping("/page/{page}")
+    public List<File> getFiles(@PathVariable int page) {
+        return filesService.findAll(page);
+    }
+    @GetMapping("/id/{id}")
     public File getFile(@PathVariable int id) {
         return filesService.findOne(id);
     }

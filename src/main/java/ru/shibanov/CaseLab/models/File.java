@@ -25,7 +25,7 @@ public class File {
     private String description;
 
     @Column(name = "creation_date", updatable = false, insertable = false)
-    private LocalDateTime creation_date;
+    private LocalDateTime creationDate;
 
     @Column(name = "base64")
     @NotEmpty(message = "Кодировка base64 не может быть пустой!")
@@ -63,12 +63,12 @@ public class File {
         this.description = description;
     }
 
-    public LocalDateTime getCreation_date() {
-        return creation_date;
+    public LocalDateTime getCreationDate() {
+        return creationDate;
     }
 
-    public void setCreation_date(LocalDateTime creation_date) {
-        this.creation_date = creation_date;
+    public void setCreationDate(LocalDateTime creation_date) {
+        this.creationDate = creation_date;
     }
 
     public @NotEmpty(message = "Кодировка base64 не может быть пустой!") String getBase64() {
